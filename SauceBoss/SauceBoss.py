@@ -2,10 +2,14 @@ import webbrowser as wb
 import os
 #Trackin' down your soul just to make you mine,mixin' all the lights flashing in my eyes. i believe in the sounds pumpin in my mind,as we bounce into the music. BOUNCE INTO THE MUSIC
 
+chromePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s --incognito'
+chromePath2 = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito' #failsafe
+
 print("//INITIALIZING SauceBoss//")
 print("MADE BY:Ace J.P.,no copyright whatsoever")
 print("for sauce opening in incognito please input the code below")
-print("for sauce history please input code:0000")
+print("for the nhentai homepage please input :home")
+print("for sauce history please input code :0000")
 print("for COMPLETE HISTORY WIPE please input :DELETE")
 def sauceBoss(): # This is where the fun begins....
     CODE = input("Please enter the code:") #Enter the Nuclear code
@@ -29,8 +33,6 @@ def sauceBoss(): # This is where the fun begins....
         sauceBoss()
     else: #Nuclear's Launch
         NuclearCode = f'https://nhentai.net/g/{CODE}/'  
-        chromePath = 'C:/Program Files/Google/Chrome/Application/chrome.exe %s --incognito'
-        chromePath2 = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --incognito' #failsafe
         wb.get(chromePath).open(NuclearCode)
         wb.get(chromePath2).open(NuclearCode) #failsafe
         f = open("SauceArchive.txt", "a")
