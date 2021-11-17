@@ -23,6 +23,7 @@ def sauceBoss(): # This is where the fun begins....
     elif CODE == ("home") :
         wb.get(chromePath).open('https://nhentai.net')
         wb.get(chromePath2).open('https://nhentai.net') #failsafe
+        sauceBoss()
     elif NumberChecker == False: #ONLY NUMBER
         print("ERROR")
         sauceBoss()
