@@ -26,7 +26,7 @@ def sauceBoss(): # This is where the fun begins....
         theKey = f'https://nhentai.net/search/?q={SearchKeyword}'
         wb.get(chromePath).open(theKey)
         wb.get(chromePath2).open(theKey) #failsafe
-    elif CODE == ("home") :
+    elif CODE == ("home") : #α
         wb.get(chromePath).open('https://nhentai.net')
         wb.get(chromePath2).open('https://nhentai.net') #failsafe
         sauceBoss()
