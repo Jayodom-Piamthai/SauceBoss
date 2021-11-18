@@ -14,13 +14,14 @@ print("for COMPLETE HISTORY WIPE please input :DELETE")
 def sauceBoss(): # This is where the fun begins....
     CODE = input("Please enter the code:") #Enter the Nuclear code
     NumberChecker = (CODE.isnumeric()) #only number,sucker
+    AlphaChecker = (CODE.isalpha()) #only alphabet,mucker
     if CODE == ("DELETE") : #library's end
         D = open("SauceArchive.txt", "w")
         D.write("")
         D.close()
         print("History successfully wiped")
         sauceBoss()
-    elif CODE == ("home") :
+    elif CODE == ("home") : #α
         wb.get(chromePath).open('https://nhentai.net')
         wb.get(chromePath2).open('https://nhentai.net') #failsafe
         sauceBoss()
