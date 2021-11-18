@@ -8,6 +8,7 @@ chromePath2 = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --
 print("//INITIALIZING SauceBoss//")
 print("MADE BY:Ace J.P.,no copyright whatsoever")
 print("for sauce opening in incognito please input the code below")
+print("for search please input: search [keyword]")
 print("for the nhentai homepage please input :home")
 print("for sauce history please input code :0000")
 print("for COMPLETE HISTORY WIPE please input :DELETE")
@@ -21,6 +22,11 @@ def sauceBoss(): # This is where the fun begins....
         D.close()
         print("History successfully wiped")
         sauceBoss()
+    elif 'search' in CODE : #turn the key,flip the switch
+        SearchKeyword = (CODE.split(' ',1)[1])
+        theKey = f'https://nhentai.net/search/?q={SearchKeyword}'
+        wb.get(chromePath).open(theKey)
+        wb.get(chromePath2).open(theKey) #failsafe
     elif CODE == ("home") : #α
         wb.get(chromePath).open('https://nhentai.net')
         wb.get(chromePath2).open('https://nhentai.net') #failsafe
