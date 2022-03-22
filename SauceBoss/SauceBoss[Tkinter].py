@@ -11,7 +11,6 @@ chromePath2 = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s --
 
 root=Tk()
 root.title("SauceBoss")
-root.iconbitmap("projectAndShits(transparent).ico")
 
 frame=LabelFrame(root,padx=30,pady=60)
 frame.configure(bg="gray13")
