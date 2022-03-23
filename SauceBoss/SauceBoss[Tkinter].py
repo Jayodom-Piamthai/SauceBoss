@@ -30,7 +30,7 @@ mode=[
 modeus=IntVar()
 modeus.set("sauce")
 for type,mv,rowPos,columnPos in mode:
-    Radiobutton(frame,text=type,variable=modeus,value=mv,bg="gray13",fg="violetRed3",font=("Helvetica",10,"bold")).grid(row=rowPos,column=columnPos,columnspan=columnPos+5)
+    Radiobutton(frame,text=type,variable=modeus,value=mv,bg="gray13",fg="violetRed3",font=("Helvetica",10,"bold")).grid(row=rowPos,column=columnPos,columnspan=columnPos+8)
 def clicked(value):
     if value == 1 :
         NuclearCode = f'https://nhentai.net/g/{searchBar.get()}/'  
