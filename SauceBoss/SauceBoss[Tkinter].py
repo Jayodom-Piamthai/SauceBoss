@@ -25,7 +25,7 @@ searchBar=Entry(frame,width=50,bg="black",fg="white")
 search=Button(frame,text="Search",font=("Helvetica",10,"bold"),bg="black",fg="Red",command=lambda:clicked(modeus.get()))
 #type
 mode=[
-    ("Sauce",1,4,5),("Name Search",2,4,22),("tag",3,4,45)
+    ("Sauce",1,4,5),("Name Search",2,4,22),("Tag",3,4,45)
 ]
 modeus=IntVar()
 modeus.set("sauce")
@@ -41,7 +41,7 @@ def clicked(value):
         wb.get(chromePath).open(theKey)
         wb.get(chromePath2).open(theKey)
     if value == 3 :
-        theTag = f"https://nhentai.net/tag/{searchBar()}"
+        theTag = f"https://nhentai.net/tag/{searchBar.get()}"
         wb.get(chromePath).open(theTag)
         wb.get(chromePath2).open(theTag)
 
